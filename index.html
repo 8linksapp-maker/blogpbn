@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#00802d" />
+    <title>Site 01 PBN Final - Dr. João</title>
+    <meta name="description" content="Dicas de saúde e cardiologia com Dr. João." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#00802d',
+                50: '#00802d10',
+                100: '#00802d20',
+                500: '#00802d',
+                600: '#006624', // Darker shade for hover effects
+                700: '#004d1b',
+              },
+              secondary: {
+                DEFAULT: '#ffffff',
+                500: '#ffffff',
+              },
+              gray: {
+                50: '#f9fafb',
+                900: '#111827',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-gray-50 text-gray-900 antialiased;
+        }
+      }
+      @layer components {
+        .btn-primary {
+          @apply px-4 py-2 bg-primary text-white rounded-lg font-medium 
+                 hover:opacity-90 transition-opacity;
+        }
+        
+        .container-blog {
+          @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1",
+    "react-helmet-async": "https://esm.sh/react-helmet-async@2.0.4?deps=react@18.3.1,react-dom@18.3.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-slate-800 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
