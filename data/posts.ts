@@ -1,11 +1,19 @@
-import { Post, Author } from '../types';
-
-const defaultAuthor: Author = {
-  name: "Dr. João",
-  role: "Cardiologista",
-  avatar: "https://picsum.photos/seed/doctor/150/150",
-  bio: "Especialista em saúde cardiovascular com mais de 15 anos de experiência clínica."
-};
+export interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  coverImage: string;
+  category: string;
+  date: string;
+  readTime: string;
+  author: {
+    name: string;
+    role: string;
+    avatar: string;
+  };
+}
 
 export const posts: Post[] = [
   {
@@ -29,9 +37,13 @@ export const posts: Post[] = [
     `,
     coverImage: "https://picsum.photos/seed/heart1/800/400",
     category: "Dicas",
-    author: defaultAuthor,
     date: "2023-10-15",
-    readTime: "5 min"
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
   },
   {
     id: "2",
@@ -54,9 +66,13 @@ export const posts: Post[] = [
     `,
     coverImage: "https://picsum.photos/seed/run/800/400",
     category: "Notícias",
-    author: defaultAuthor,
     date: "2023-10-20",
-    readTime: "4 min"
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
   },
   {
     id: "3",
@@ -76,9 +92,13 @@ export const posts: Post[] = [
     `,
     coverImage: "https://picsum.photos/seed/food/800/400",
     category: "Dicas",
-    author: defaultAuthor,
     date: "2023-11-01",
-    readTime: "6 min"
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
   },
   {
     id: "4",
@@ -91,26 +111,28 @@ export const posts: Post[] = [
     `,
     coverImage: "https://picsum.photos/seed/exam/800/400",
     category: "Notícias",
-    author: defaultAuthor,
     date: "2023-11-10",
-    readTime: "3 min"
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
+  },
+  {
+    id: "post-1770160276188",
+    title: "primeiro post",
+    slug: "primeiro-post",
+    excerpt: "primeiro post",
+    content: `primeiro post`,
+    coverImage: "/placeholder.svg",
+    category: "Saude",
+    date: "2026-02-03",
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
   }
 ];
-
-export const siteConfig = {
-  name: "Site 01 PBN Final",
-  description: "Dicas de saúde e cardiologia com Dr. João.",
-  url: "https://pbnfinal.com.br",
-  author: defaultAuthor
-};
-
-export function getPostBySlug(slug: string): Post | undefined {
-  return posts.find(post => post.slug === slug);
-}
-
-export function getPostsByCategory(category: string): Post[] {
-  return posts.filter(post => 
-    post.category.toLowerCase() === category.toLowerCase() || 
-    post.category.toLowerCase().replace(/\s+/g, '-') === category.toLowerCase()
-  );
-}
