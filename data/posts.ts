@@ -139,5 +139,33 @@ export const posts: Post[] = [
       role: "Editor",
       avatar: "/placeholder.svg",
     },
+  },
+  {
+    id: "post-1770160555782",
+    title: "primeiro post",
+    slug: "primeiro-post",
+    excerpt: "primeiro post",
+    content: `primeiro post`,
+    coverImage: "/placeholder.svg",
+    category: "Saude",
+    date: "2026-02-03",
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
   }
 ];
+
+export function getPostBySlug(slug: string): Post | undefined {
+  return posts.find(post => post.slug === slug);
+}
+
+export function getPostsByCategory(category: string): Post[] {
+  return posts.filter(post => post.category === category);
+}
+
+export function getCategories(): string[] {
+  return [...new Set(posts.map(post => post.category))];
+}
