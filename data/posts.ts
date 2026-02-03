@@ -139,21 +139,5 @@ export const posts: Post[] = [
       role: "Editor",
       avatar: "/placeholder.svg",
     },
-  },
-  {
-    id: "post-1770160434817",
-    title: "segundo post",
-    slug: "segundo-post",
-    excerpt: "segundo post",
-    content: `segundo post`,
-    coverImage: "/placeholder.svg",
-    category: "Saude",
-    date: "2026-02-03",
-    readTime: "5 min",
-    author: {
-      name: "Admin",
-      role: "Editor",
-      avatar: "/placeholder.svg",
-    },
   }
 ];
