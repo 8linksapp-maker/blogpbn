@@ -15,6 +15,27 @@ export interface Post {
   };
 }
 
+export interface SiteConfig {
+  name: string;
+  description: string;
+  url: string;
+  ogImage: string;
+  links: {
+    twitter?: string;
+    github?: string;
+  };
+}
+
+export const siteConfig: SiteConfig = {
+  name: "Blog pbn final",
+  description: "Blog pbn final",
+  url: "https://blogpbnfinal.vercel.app",
+  ogImage: "/og-image.jpg",
+  links: {
+    twitter: "",
+  },
+};
+
 export const posts: Post[] = [
   {
     id: "1",
@@ -125,6 +146,22 @@ export const posts: Post[] = [
     slug: "primeiro-post",
     excerpt: "primeiro post",
     content: `primeiro post`,
+    coverImage: "/placeholder.svg",
+    category: "Saude",
+    date: "2026-02-03",
+    readTime: "5 min",
+    author: {
+      name: "Admin",
+      role: "Editor",
+      avatar: "/placeholder.svg",
+    },
+  },
+  {
+    id: "post-1770160434817",
+    title: "segundo post",
+    slug: "segundo-post",
+    excerpt: "segundo post",
+    content: `segundo post`,
     coverImage: "/placeholder.svg",
     category: "Saude",
     date: "2026-02-03",
