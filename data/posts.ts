@@ -141,22 +141,6 @@ export const posts: Post[] = [
     },
   },
   {
-    id: "post-1770160276188",
-    title: "primeiro post",
-    slug: "primeiro-post",
-    excerpt: "primeiro post",
-    content: `primeiro post`,
-    coverImage: "/placeholder.svg",
-    category: "Saude",
-    date: "2026-02-03",
-    readTime: "5 min",
-    author: {
-      name: "Admin",
-      role: "Editor",
-      avatar: "/placeholder.svg",
-    },
-  },
-  {
     id: "post-1770160434817",
     title: "segundo post",
     slug: "segundo-post",
